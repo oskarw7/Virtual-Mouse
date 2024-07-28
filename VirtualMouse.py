@@ -27,6 +27,10 @@ class VirtualMouse:
             self._camera.release()
         cv2.destroyAllWindows()
 
+    # index finger up to move coursor
+    # index finger and thumb up to click
+    # index and middle finger up to scroll up
+    # thumb, index and middle finger up to scroll down
     def _whichMode(self, areFingersUp):
         if (not areFingersUp[0] and areFingersUp[1] and not areFingersUp[2]
                 and not areFingersUp[3] and not areFingersUp[4]):
